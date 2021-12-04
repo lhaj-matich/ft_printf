@@ -1,6 +1,6 @@
 #include "ft_printf.h"
 
-int	ft_printstr(char *s)
+int	ft_printStr(char *s)
 {
 	int len;
 	if (!s)

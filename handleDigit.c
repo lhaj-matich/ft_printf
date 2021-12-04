@@ -1,6 +1,6 @@
 #include "ft_printf.h"
 
-int	ft_printdigit(int n)
+int	ft_printDigit(int n)
 {
 	char *number;
 	int len;

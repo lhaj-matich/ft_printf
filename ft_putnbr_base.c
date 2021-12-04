@@ -1,3 +1,5 @@
+#include "ft_printf.h"
+
 int	is_space(char c)
 {
 	if (c == '\t' || c == '\n' || c == '\v' || c == '\f'

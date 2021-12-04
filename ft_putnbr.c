@@ -1,8 +1,8 @@
 #include "ft_printf.h"
 
-void	ft_putnbr(int n)
+void	ft_putnbr(unsigned int n)
 {
-	long	number;
+	unsigned long	number;
 
 	number = n;
 	if (number < 0)
@@ -20,10 +20,3 @@ void	ft_putnbr(int n)
 		ft_putnbr(number % 10);
 	}
 }
-
-int	ft_printuDigit(unsigned int n)
-{
-	ft_putnbr(n);
-	return (ft_count_length(n, 10));	
-}
-
