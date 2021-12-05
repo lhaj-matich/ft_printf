@@ -14,7 +14,7 @@ int	ft_check_base(char *str)
 	int	j;
 
 	i = 0;
-	if (ft_strlen(str) < 2 || str[i] == '\0')
+	if (ft_strlen(str) < 2)
 	{
 		return (0);
 	}
@@ -33,26 +33,30 @@ int	ft_check_base(char *str)
 	return (1);
 }
 
-void	ft_putnbr_base(int nbr, char *base)
+int	ft_putnbr_base(unsigned long nbr, char *base)
 {
-	long	n;
-	int		base_size;
+	int		i;
+	int		result[100];
+	int		save;
 
-	n = nbr;
-	base_size = ft_strlen(base);
+	i = 0;
+	save = 0;
 	if (ft_check_base(base))
 	{
-		if (n < 0)
+		if (nbr < 0)
 		{
 			ft_putchar('-');
-			n = n * -1;
+			nbr = nbr * -1;
 		}
-		if (n >= base_size)
+		while (nbr)
 		{
-			ft_putnbr_base((n / base_size), base);
-			ft_putnbr_base((n % base_size), base);
+			result[i] = nbr % ft_strlen(base);
+			nbr = nbr / ft_strlen(base);
+			i++;
 		}
-		else
-			ft_putchar(base[n]);
+		save = i;
+		while (--i >= 0)
+			ft_putchar(base[result[i]]);
 	}
+	return (save);
 }

@@ -13,6 +13,12 @@ int	ft_handle_specifier(va_list p_args, char sp)
 		counter = ft_printStr(va_arg(p_args, char *));
 	if (sp == 'x')
 		counter = ft_printHex(va_arg(p_args, unsigned int), _xbase);
+	if (sp == 'X')
+		counter = ft_printHex(va_arg(p_args, unsigned int), _Xbase);
+	if (sp == 'p')
+		counter = ft_printPointer(va_arg(p_args, unsigned long), _xbase);
+	if (sp == '%')
+		counter = ft_printPerc();
 	return (counter);
 }
 

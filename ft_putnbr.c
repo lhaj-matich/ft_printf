@@ -1,8 +1,9 @@
 #include "ft_printf.h"
 
-void	ft_putnbr(unsigned int n)
+int	ft_putnbr(unsigned int n)
 {
 	unsigned long	number;
+	static int i;
 
 	number = n;
 	if (number < 0)
@@ -13,10 +14,12 @@ void	ft_putnbr(unsigned int n)
 	if (number < 10)
 	{
 		ft_putchar(number + '0');
+		i += 1;
 	}
 	else
 	{
 		ft_putnbr(number / 10);
 		ft_putnbr(number % 10);
 	}
+	return (i);
 }

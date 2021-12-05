@@ -1,6 +1,7 @@
 #include "ft_printf.h"
 
-int	printPerc() {
+int	ft_printPerc()
+{
 	ft_putchar('%');
 	return (1);
 }
