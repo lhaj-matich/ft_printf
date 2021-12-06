@@ -1,4 +1,5 @@
 #include "ft_printf.h"
+#include <stdio.h>
 
 int	ft_handle_specifier(va_list p_args, char sp)
 {

@@ -11,7 +11,7 @@
 
 void	ft_putchar(char c);
 void	ft_putstr(char *str);
-int		ft_putnbr(unsigned int n);
+void	ft_putnbr(unsigned int n);
 int		ft_putnbr_base(unsigned long nbr, char *base);
 int		ft_printf(const char *format, ...);
 int		ft_strlen(const char *str);
@@ -22,7 +22,7 @@ int		ft_printuDigit(unsigned int n);
 int		ft_printHex(unsigned int number, char *base);
 int		ft_printPerc();
 int		ft_printPointer(unsigned long n, char *base);
-int		ft_count_length(int n, int base);
+// int		ft_calculate_length(unsigned int n);
 char	*ft_itoa(int n);
 char	*ft_strdup(const char *s1);
 
