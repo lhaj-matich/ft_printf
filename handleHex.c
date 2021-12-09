@@ -1,6 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   handleHex.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ochoumou <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/12/09 21:03:05 by ochoumou          #+#    #+#             */
+/*   Updated: 2021/12/09 21:03:26 by ochoumou         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "ft_printf.h"
 
-int	ft_printHex(unsigned int number, char *base)
+int	ft_print_hex(unsigned int number, char *base)
 {
 	if (number == 0)
 	{
